@@ -1,18 +1,12 @@
 pipeline {
     agent {
-        docker{
-            image 'danielofir/python3.8'
-        }
-
+        docker { image 'node:14-alpine' }
     }
-
-        stage('Checkout SCM'){
-            checkout scm
+    stages {
+        stage('Test') {
+            steps {
+                sh 'node --version'
+            }
         }
-
-
-        stage('Checking'){
-            sh 'pip3 list'
-        }
-
+    }
 }
