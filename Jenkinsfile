@@ -6,12 +6,13 @@ pipeline {
 
     }
 
-    stages {
+        stage('Checkout SCM'){
+            checkout scm
+        }
+
 
         stage('Checking'){
             sh 'pip3 list'
         }
-
-    }
 
 }
