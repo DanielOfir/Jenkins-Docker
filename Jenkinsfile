@@ -19,6 +19,12 @@ pipeline {
             }
         }
 
+        stage('Python run'){
+            steps{
+                sh 'python3 main.py'
+            }
+        }
+
     }
 
         // stage('Checkout SCM'){
