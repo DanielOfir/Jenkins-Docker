@@ -1,9 +1,7 @@
 pipeline {
-    // agent {
-    //     docker{
-    //         image 'danielofir/python3.8'
-    //     }
-    // }
+    agent {
+        label 'python3'
+    }
 
     stages {
 
